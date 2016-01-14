@@ -1,24 +1,25 @@
 var _ = require('lodash');
 
-module.exports = function(collection) {
+module.exports = function(item) {
   var result = {
     hot: [],
     warm: []
   };
 
-  function check_temp (item) {
+  function checkTemp(item) {
     return item > 19;
   }
 
   _.forEach(item, function (town, townname) {
 
-    if (_.every(town, check_temp)) {
-        result.hot.push(townname);
-    } else if (_.some(town, check_temp)) {
-        result.warm.push(townname);
-    }
+      if (_.every(town, checkTemp)) {
+          result.hot.push(townname);
+      } else if (_.some(town, checkTemp)) {
+          result.warm.push(townname);
+      }
 
-});
+  });
 
   return result;
+
 };
