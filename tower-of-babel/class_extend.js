@@ -1,7 +1,5 @@
-var util = require('util');
-
 class Character {
-  constructon(x, y) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
     this.health_ = 100;
@@ -18,7 +16,7 @@ class Character {
 }
 
 
-class Player extends Character{
+class Player extends Character {
   constructor(x, y, name) {
     super(x, y);
     this.name = name;
