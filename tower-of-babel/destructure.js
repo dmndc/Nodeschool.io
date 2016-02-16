@@ -10,7 +10,6 @@ var json = {
    }
  };
 
- // Your code here.
 
  console.log(familyName);
  console.log(birthDay);
