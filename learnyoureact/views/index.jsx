@@ -28,8 +28,16 @@ class TodoList extends React.Component {
     }
 }
 
+
 class Todo extends React.Component {
-  // Write code here
+  render() {
+    return (
+      <tr>
+        <td style={{border: "1px solid black"}}>{this.props.title}</td>
+        <td style={{border: "1px solid black"}}>{this.props.children}</td>
+      </tr>
+    );
+  }
 }
 
 
