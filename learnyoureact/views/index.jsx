@@ -44,6 +44,13 @@ class TodoList extends React.Component {
     this.setState({detailValue: ""});
   }
 
+  deleteTodo(title) {
+    let newData = this.state.data.filter(function (todo) {
+        return todo.title !== title;
+    });
+    this.setState({data: newData});
+  }
+
   render() {
     let todo = this.state.data.map(function(obj) {
       return <Todo title={obj.title} key={obj.title}>{obj.detail}</Todo>;
